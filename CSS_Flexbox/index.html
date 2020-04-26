@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="shortcut icon" type="image/png" href="img/hotel.png">
+   
+   <title>Triveggo</title>
+</head>
+<body>
+   <div class="container">
+
+      <div class="header">
+
+         <img src="/img/hotel.png" alt="Hotel Icon" class="hotel_icon">
+
+         <form action="#" class="search">
+            <input type="text" class="search_input" placeholder="Search for Hotels">
+            <button class="search_button">
+               <svg class="search_icon">
+                  <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+               </svg>
+            </button>
+         </form>
+
+         <nav class="user-nav">
+
+               <div class="user-nav_button">
+                  <svg class="user-nav_icon">
+                     <use xlink:href = "img/sprite.svg#icon-bookmark"></use>
+                  </svg>
+                  <span class="user-nav_notification">
+                     8
+                  </span>
+               </div>
+
+               <div class="user-nav_button">
+                  <svg class="user-nav_icon">
+                     <use xlink:href = "img/sprite.svg#icon-chat"></use>
+                  </svg>
+                  <span class="user-nav_notification">
+                     10
+                  </span>
+               </div>
+               
+               <div class="user-nav_button_1">
+                  <img src="/img/user.jpg" alt="User Photo" class="user-nav_photo">
+               </div>
+
+         </nav>
+
+      </div>
+
+      <div class="content">
+         <div class="navbar">
+
+            <ul class="navbar_list">
+
+               <li class="navbar_list_item">
+                  <a href="#" class="navbar_list_link">
+                     <svg class="navbar_list_icon">
+                        <use xlink:href = "img/sprite.svg#icon-home"></use>
+                     </svg>
+                     <span>Home</span>
+                  </a>
+               </li>
+
+               <li class="navbar_list_item">
+                  <a href="#" class="navbar_list_link">
+                     <svg class="navbar_list_icon">
+                        <use xlink:href = "img/sprite.svg#icon-key"></use>
+                     </svg>
+                     <span>Rental</span>
+                  </a>
+               </li>
+
+               <li class="navbar_list_item">
+                  <a href="#" class="navbar_list_link">
+                     <svg class="navbar_list_icon">
+                        <use xlink:href = "img/sprite.svg#icon-aircraft-take-off"></use>
+                     </svg>
+                     <span>Flights</span>
+                  </a>
+               </li>
+
+               <li class="navbar_list_item">
+                  <a href="#" class="navbar_list_link">
+                     <svg class="navbar_list_icon">
+                        <use xlink:href = "img/sprite.svg#icon-map"></use>
+                     </svg>
+                     <span>Tours</span>
+                  </a>
+               </li>
+
+            </ul>
+
+            <div class="navbar_footer">
+               &copy;by Triveggo. All rights reserved.
+            </div>
+         </div>
+
+         <div class="main">
+            <div class="gallery">
+               <figure class="gallery_items">
+                  <img src="/img/hotel_1.jfif" alt="Hotel 1" class="gallery_photo">
+               </figure>
+               <figure class="gallery_items">
+                  <img src="/img/hotel_2.jfif" alt="Hotel 2" class="gallery_photo">
+               </figure>
+               <figure class="gallery_items">
+                  <img src="/img/hotel_3.jfif" alt="Hotel 3" class="gallery_photo">
+               </figure>
+            </div>
+
+            <div class="hotel_overview">
+               <div class="hotel_overview_name">
+                  Hotel Triveggo
+               </div>
+
+               <div class="hotel_overview_stars">
+                  <svg class="hotel_overview_icon">
+                     <use xlink:href = "/img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="hotel_overview_icon">
+                     <use xlink:href = "/img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="hotel_overview_icon">
+                     <use xlink:href = "/img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="hotel_overview_icon">
+                     <use xlink:href = "/img/sprite.svg#icon-star"></use>
+                  </svg>
+                  <svg class="hotel_overview_icon">
+                     <use xlink:href = "/img/sprite.svg#icon-star"></use>
+                  </svg>
+               </div>
+
+               <div class="hotel_overview_location">
+
+                  <svg class="hotel_overview_location_icon">
+                     <use xlink:href = "/img/sprite.svg#icon-location-pin"></use>
+                  </svg>
+                  <button class="btn_inline">
+                     California, USA
+                  </button>
+                  
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

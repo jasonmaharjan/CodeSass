@@ -1,0 +1,26 @@
+{
+  "name": "flexbox_grid-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass grid.scss style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass grid.scss style.css.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' style.comp.css -o style.prefix.css",
+    "compress:css": "node-sass style.prefix.css style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "dev": "node-sass grid.scss style.css -w"
+  },
+  "author": "Jason",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.2.6",
+    "concat": "^1.0.3",
+    "node-sass": "^4.14.0",
+    "nodemon": "^1.19.4",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^4.1.1"
+  }
+}

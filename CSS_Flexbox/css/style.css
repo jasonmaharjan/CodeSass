@@ -1,0 +1,254 @@
+:root {
+  --color-primary: #bb00c2;
+  --color-primary-light: rgb(181, 14, 187);
+  --color-primary-dark: rgb(70, 2, 77);
+  --color-grey-light-1: #faf9f9;
+  --color-grey-light-2: #f4f2f2;
+  --color-grey-light-3: #f0eeee;
+  --color-grey-light-4: #ccc;
+  --color-grey-dark-1: #333;
+  --color-grey-dark-2: #777;
+  --color-grey-dark-3: #999;
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,0.3);
+  --shadow-light: 0 2rem 5rem rgba(0,0,0,0.06);
+  --border-dark: 1px solid var(--color-grey-dark-2)
+; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  background-color: var(--color-primary);
+  color: var(--color-grey-dark-2);
+  font-family: "Open Sans", sans-serif;
+  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh; }
+
+.hotel_icon {
+  height: 7rem;
+  width: 7rem;
+  cursor: pointer; }
+
+.search {
+  flex: 0 0 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .search_input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    margin-right: -3.5rem;
+    padding: 1rem 2rem;
+    width: 90%;
+    border: none;
+    border-radius: 10rem;
+    background-color: var(--color-grey-light-2);
+    transition: all .3s; }
+    .search_input:focus {
+      width: 110%;
+      outline: none; }
+    .search_input::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4); }
+  .search_input:focus + .search_button:focus {
+    outline: none; }
+  .search_button {
+    background-color: var(--color-grey-light-2);
+    border: none; }
+    .search_button:focus {
+      outline: none; }
+    .search_button:active {
+      transform: translateY(0.4rem); }
+  .search_icon {
+    height: 2rem;
+    width: 2rem;
+    fill: var(--color-grey-dark-2); }
+
+.user-nav {
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 20%;
+  align-items: center;
+  justify-content: center;
+  position: relative; }
+  .user-nav_button {
+    display: flex;
+    flex: 1;
+    height: 100%;
+    width: 14rem;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    padding: .5rem 1rem; }
+  .user-nav_button_1 {
+    display: flex;
+    flex: 1 0 20%;
+    height: 100%;
+    width: 24rem;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    padding: .5rem 1rem; }
+  .user-nav_button_1:hover {
+    background-color: var(--color-grey-light-2);
+    cursor: pointer; }
+  .user-nav_button:hover {
+    background-color: var(--color-grey-light-2);
+    cursor: pointer; }
+  .user-nav_icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill: var(--color-grey-dark-2); }
+  .user-nav_notification {
+    position: absolute;
+    height: 2rem;
+    width: 2rem;
+    background-color: #ff0116;
+    border-radius: 50%;
+    color: #fff;
+    margin-top: -1.5rem;
+    margin-left: 1rem;
+    font-size: .8rem;
+    text-align: center; }
+  .user-nav_photo {
+    height: 4rem;
+    border-radius: 50%; }
+
+.navbar {
+  font-size: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; }
+  .navbar_list {
+    list-style: none;
+    text-transform: uppercase;
+    margin-top: 3.5rem; }
+    .navbar_list_item {
+      cursor: pointer;
+      position: relative; }
+      .navbar_list_item:not(:last-child) {
+        margin-bottom: .5rem; }
+    .navbar_list_item::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: var(--color-primary);
+      height: 100%;
+      width: 3px;
+      transform-origin: center;
+      transform: scaleY(0);
+      transition: transform 0.2s, width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+      background-color: .1s; }
+    .navbar_list_item:hover::before {
+      transform: scaleY(1);
+      width: 100%; }
+    .navbar_list_item:active::before {
+      background-color: var(--color-primary-light); }
+    .navbar_list_link:link, .navbar_list_link:visited {
+      color: var(--color-grey-light-1);
+      text-decoration: none;
+      text-transform: uppercase;
+      display: block;
+      padding: 1.5rem 3rem;
+      position: relative;
+      z-index: 10;
+      display: flex;
+      align-items: center; }
+    .navbar_list_icon {
+      height: 1.75rem;
+      width: 2.25rem;
+      fill: currentColor;
+      margin-right: 1.5rem; }
+  .navbar_footer {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1.5rem; }
+
+.gallery {
+  display: flex;
+  align-items: center; }
+  .gallery_photo {
+    display: block;
+    height: 15rem;
+    width: 100%;
+    flex: 1; }
+
+.hotel_overview {
+  display: flex;
+  background-color: var(--color-grey-light-1);
+  align-items: center;
+  padding: 1rem 0rem; }
+  .hotel_overview_name {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 2.25rem;
+    color: var(--color-grey-dark-2);
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    font-weight: 350;
+    display: inline-block; }
+  .hotel_overview_stars {
+    display: flex;
+    align-items: center;
+    margin-right: auto; }
+  .hotel_overview_icon {
+    fill: var(--color-primary);
+    height: 1.75rem;
+    width: 1.75rem; }
+  .hotel_overview_location {
+    display: flex;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    border-bottom: var(--border-dark); }
+    .hotel_overview_location_icon {
+      fill: var(--color-primary);
+      height: 1.75rem;
+      width: 1.75rem; }
+
+.btn-inline {
+  border: none; }
+
+.container {
+  min-height: 50rem;
+  margin: 8.8rem auto;
+  max-width: 110rem;
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow); }
+
+.header {
+  font-size: 1.4rem;
+  height: 7rem;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: var(--border-dark); }
+
+.content {
+  display: flex;
+  justify-content: center; }
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.801);
+  flex: 0 0 18%;
+  min-height: 100vh; }
+
+.main {
+  background-color: var(--color-grey-light-4);
+  flex: 1 0 20%; }

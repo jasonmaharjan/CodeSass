@@ -1,0 +1,277 @@
+///////////////////////////////
+// HEADER
+
+.hotel_icon {
+   height: 7rem;
+   width: 7rem;
+   cursor: pointer;
+}
+
+.search {
+   flex: 0 0 40%;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+   &_input {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      margin-right: -3.5rem;
+      padding: 1rem 2rem;
+      width: 90%;
+      border: none;
+      border-radius: 10rem;
+      background-color: var(--color-grey-light-2);
+      transition: all .3s;
+
+      &:focus {
+         width: 110%;
+         outline: none;
+      }
+
+      &::-webkit-input-placeholder {
+         font-weight: 100;
+         color: var(--color-grey-light-4);
+      }
+   }
+
+   &_input:focus + &_button:focus {
+      outline: none;
+   }
+
+   &_button {
+      background-color: var(--color-grey-light-2);
+      border: none;
+
+      &:focus {
+         outline: none;
+      }
+
+      &:active {
+         transform: translateY(.4rem);
+      }
+   }
+
+   &_icon {
+      height: 2rem;
+      width: 2rem;
+      fill: var(--color-grey-dark-2);
+   }
+}
+
+.user-nav {
+   align-self: stretch;
+   display: flex;
+   flex: 0 0 20%;
+   align-items: center;
+   justify-content: center;
+   position: relative;
+
+   &_button {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      width: 14rem;
+      align-items: center;
+      justify-content: center;
+      width: 6rem;
+      padding: .5rem 1rem;
+   }
+
+   &_button_1 {
+      display: flex;
+      flex: 1 0 20%;
+      height: 100%;
+      width: 24rem;
+      align-items: center;
+      justify-content: center;
+      width: 6rem;
+      padding: .5rem 1rem;
+   }
+
+   &_button_1:hover {
+      background-color: var(--color-grey-light-2);
+      cursor: pointer;
+   }
+
+
+   &_button:hover {
+      background-color: var(--color-grey-light-2);
+      cursor: pointer;
+   }
+
+   &_icon {
+      height: 2.5rem;
+      width: 2.5rem;
+      fill: var(--color-grey-dark-2);
+   }
+
+   &_notification {
+      position: absolute;
+      height: 2rem;
+      width: 2rem;
+      background-color: rgb(255, 1, 22);
+      border-radius: 50%;
+      color: #fff;
+      margin-top: -1.5rem;
+      margin-left: 1rem;
+      font-size: .8rem;
+      text-align: center;
+   }
+
+   &_photo {
+      height: 4rem;
+      border-radius: 50%;
+   }
+}
+
+///////////////////////////////
+// NAVBAR
+
+.navbar {
+   font-size: 1.4rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between; 
+   
+   &_list {
+      list-style: none;
+      text-transform: uppercase;
+      margin-top: 3.5rem;
+
+      &_item {
+         cursor: pointer;
+         position: relative;
+
+         &:not(:last-child) {
+            margin-bottom: .5rem;
+         }
+      }
+
+      &_item::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         background-color: var(--color-primary);
+         height: 100%;
+         width: 3px;
+         
+         transform-origin: center;
+         transform: scaleY(0);
+         transition: transform .2s,
+                     width .4s cubic-bezier(1,0,0,1) .2s;  // .2s is the delay for width and cubic bezier for acceleration!
+         background-color: .1s;
+      }
+
+      &_item:hover::before {
+         transform: scaleY(1);
+         width: 100%;
+      }
+
+      &_item:active::before{    // When user presses the nav button!
+         background-color: var(--color-primary-light);
+      }
+
+
+      &_link:link,
+      &_link:visited {
+         color: var(--color-grey-light-1);
+         text-decoration: none;
+         text-transform: uppercase;
+         display: block;
+         padding: 1.5rem 3rem;
+         position: relative;  // needed for z-index!
+         z-index: 10;
+         display: flex;
+         align-items: center;
+      }
+
+      &_icon {
+         height: 1.75rem;
+         width: 2.25rem;
+         fill: currentColor;
+         margin-right: 1.5rem;
+      }
+   }
+
+   &_footer {
+      font-size: 1.2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+   }
+}
+
+
+
+///////////////////////////////
+// GALLERY
+
+.gallery {
+   display: flex;
+   align-items: center;
+
+   &_photo {
+      display: block;
+      height: 15rem;
+      width: 100%;
+      flex: 1;
+   }
+}
+
+
+
+///////////////////////////////
+// HOTEL OVERVIEW
+
+.hotel_overview {
+   display: flex;
+   background-color: var(--color-grey-light-1);
+   align-items: center;
+   padding: 1rem 0rem;
+
+
+   &_name {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      font-size: 2.25rem;
+      color: var(--color-grey-dark-2);
+      letter-spacing: .2rem;
+      text-transform: uppercase;
+      font-weight: 350;
+      display: inline-block;
+   }
+
+   &_stars {
+      display: flex;
+      align-items: center;
+      margin-right: auto;
+   }
+
+   &_icon {
+      fill: var(--color-primary);
+      height: 1.75rem;
+      width: 1.75rem;
+   }
+
+   &_location {
+      display: flex;
+      font-size: 1.1rem;
+      color: var(--color-primary);
+      border-bottom: var(--border-dark);
+
+      &_icon {
+         fill: var(--color-primary);
+         height: 1.75rem;
+         width: 1.75rem;
+      }
+   }
+}
+
+.btn-inline {
+   border: none;
+   
+
+}
