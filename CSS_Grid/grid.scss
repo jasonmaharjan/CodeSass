@@ -17,7 +17,7 @@
    height: 100vh;
 
    grid-template-rows: repeat(2, 1fr);
-   grid-template-columns: repeat(3, 1fr);    // 1fr is like flex = 1!
+   grid-template-columns: repeat(3, 1fr);    // 1fr is like flex = 1
    grid-gap: 30px;
 }
 
@@ -70,22 +70,23 @@
 
 * {
    margin: 0;
-   padding: 0px;
+   padding: 0;
 }
 
 .container {
-   font-size: 1.1rem;
+   font-size: 1rem;
    font-family: sans-serif;
    font-weight: 600;
    color: white;
    margin: 30px 450px;
    display: grid;
-   // Name Grid lines for a more PROFESSIONAL outlook!
+   background-color: #f2f2f2;
+   // Naming CSS Grid-lines
    grid-template-rows: [header-start] 50px [header-end box-start] 100px [box-end main-start] 200px [main-end footer-start]50px [footer-end];
-   grid-template-columns: repeat(3, 1fr) 90px;
+   grid-template-columns: repeat(3, 1fr) 80px;
    grid-gap: 20px;
 
-   & > * {     // All child classes of container!!
+   & > * {     // All child classes of container
       background-color: orangered;
       padding: 10px;
    }
