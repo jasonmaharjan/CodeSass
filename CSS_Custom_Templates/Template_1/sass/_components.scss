@@ -1,73 +1,224 @@
 .header {
    grid-column: 1 / -1;
    grid-row: 1 / span 2;
-   background-image: url("../images/header_3.jpg");
+   background-image: url("../images/header.jpg");
    background-size: cover;
 
    &_profile {
-      
+      width: 25vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.5);
+      margin-left: 72rem;
+      margin-top: 18rem;
+      padding: 5rem;
    }
+
 }
 
 .overview {
    grid-column: 1 / -1;
    grid-row: 2;
    opacity: 0.8;
-   background-color: rgb(204, 204, 204);
+   color: rgb(0, 0, 0);
+   background-color: rgb(255, 255, 255);
+
+   display: grid;
+   grid-template-columns: 1fr repeat(3,minmax(min-content, 31rem)) 1fr;
+
+   &_content {
+      grid-column: 2 / span 2;
+      padding: 0 2.5rem;
+      margin: 6rem 0;
+   }
+
+   &_text_1 {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      letter-spacing: .15rem;
+   }
+
+   &_text_2 {
+      font-size: 1.4rem;
+      font-weight: 300;
+   }  
+
+   &_info {
+      grid-column: 4 / 5;
+      background-color: rgba(88, 32, 32, .5);
+   }
 }
 
 .content {
    background-color: rgb(255, 255, 255);
-   grid-column: 2 / 5;
+   grid-column: 1 / -1;
+   padding: 6rem 0;
 
    display: grid;
-   grid-template-columns: repeat(2, 1fr);
-   grid-template-rows: repeat(4, 1fr);
+   grid-template-columns: 1fr 17vw 40vw 1fr ;
+   grid-template-rows: repeat(4, minmax(18vh,1fr));
+   grid-gap: 4rem 2.75rem;
    align-items:center;
 
 
-   &_item_1 {
-      grid-column: 1 / -1;
+   %image-style {
+      color: rgb(243, 243, 243);
+      grid-column: 2 / 3; 
+      align-self: stretch;
+      word-spacing: 100vw;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+   }
+
+   %span-style {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      text-align: center;
+   }
+
+   %text-style {
+      font-size: 1.5rem;
+   }
+
+   &_image_1 {
+      @extend %image-style;
+      background:rgb(90, 161, 18);
+
+      &_span{
+         @extend %span-style;   
+      }
+   }
+
+   &_text_1 {
+      grid-column: 3 / 5;
+      &_span_1 {
+         color: rgb(90, 161, 18);
+      }
+      &_span_2 {
+         @extend %text-style;
+      }
+   }
+
+   &_image_2 {
+      @extend %image-style;
+      background: rgb(210,105,30);
       
+      &_span{
+         @extend %span-style;   
+      }
    }
 
-   &_item_2 {
-      grid-column: 1 / -1;
+   &_text_2 {
+      grid-column: 3 / 5;
+      &_span_1 {
+         color: rgb(210,105,30);
+      }
+      &_span_2 {
+         @extend %text-style;
+      }
    }
 
-   &_item_3 {
-      grid-column: 1 / -1;
+   &_image_3 {
+      @extend %image-style;
+      background: rgb(3, 167, 221);
+      
+      &_span{
+         @extend %span-style;   
+      }
    }
 
-   &_item_4 {
-      grid-column: 1 / -1;
+   &_text_3 {
+      grid-column: 3 / 5;
+      &_span_1 {
+         color: rgb(3, 167, 221);
+      }
+      &_span_2 {
+         @extend %text-style;
+      }
+   }
+
+   &_image_4 {
+      @extend %image-style;
+      background: rgb(119,136,153);
+      
+      &_span{
+         @extend %span-style;   
+      }
+   }
+
+   &_text_4 {
+      grid-column: 3 / 5;
+      &_span_1 {
+         color: rgb(119,136,153);
+      }
+      &_span_2 {
+         @extend %text-style;
+      }
    }
 }
 
 .footer {
    grid-column: 1 / -1;
+   position: relative;
 
    display: grid;
-   grid-template-columns: 1fr repeat(3, 1fr) 1fr;
-   grid-template-rows: repeat(3, min-content);
+   grid-template-columns: 1fr repeat(3, minmax(min-content, 18vw)) 1fr;
+   grid-template-rows: minmax(min-content, 45vh) 60vh 5vh;
+   grid-gap: 2rem 4rem;
    align-items:center;
    justify-content: center;
 
-   background-color: rgb(97, 93, 93);
+   %item-styling {
+      background-color: #ffffff;
+      align-self: stretch;
+      margin-top: 6rem;
 
+   }
    &_item_5 {
+      @extend %item-styling;
       grid-column: 2 / 3;
+      z-index: 1;
    }
 
    &_item_6 {
+      @extend %item-styling;
       grid-column: 3 / 4;
+      z-index: 1;
    }
 
    &_item_7 {
+      @extend %item-styling;
       grid-column: 4 / 5;
+      z-index: 1;
    }
 
-   &_item_8 {
-      grid-column: 2 / span 2;
+   &_sign_in {
+      @extend %item-styling;
+      grid-column: 2 / span 3;
+      background-color: white;
+      opacity: 0.5;
+   }
+}
+
+.bg-video {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   opacity: 0.6;
+   overflow: hidden;
+
+   &_content {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
    }
 }
