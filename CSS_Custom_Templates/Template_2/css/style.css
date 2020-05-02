@@ -7,12 +7,13 @@
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  line-height: 1.6; }
 
 body {
   background-color: #f2f2f2;
   font-size: 2rem;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Jost", sans-serif;
   font-weight: 300; }
 
 .sidebar-image {
@@ -22,24 +23,54 @@ body {
 .image {
   fill: #b6b6b6;
   height: 2.25rem;
-  width: 2.5rem; }
+  width: 2.75rem; }
   .image:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    fill: white; }
+
+.active {
+  fill: #19B5FE; }
+
+.header-content {
+  margin: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.button {
+  margin-top: 2.5rem; }
+
+.btn {
+  color: white;
+  font-family: inherit;
+  font-size: 1.55rem;
+  padding: 1.5rem 5rem;
+  text-transform: uppercase;
+  background-color: transparent;
+  border-width: thin;
+  border: .5px solid grey;
+  border-radius: .5rem;
+  transition: all .2s; }
+  .btn:hover {
+    cursor: pointer;
+    background-color: rgba(90, 90, 90, 0.1); }
+  .btn:focus {
+    outline-style: none; }
 
 .heading-1 {
-  font-size: 7rem;
-  font-family: "Josefin Sans", sans-serif; }
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: .1rem; }
 
 .heading-2 {
-  font-size: 3rem;
-  font-family: "Josefin Sans", sans-serif; }
+  font-size: 2.25rem; }
 
 .span-top {
-  margin: 3.5rem; }
+  margin-top: .25rem; }
 
 .container {
   display: grid;
-  grid-template-rows: 60vh 100vh 50vh;
+  grid-template-rows: 75vh 100vh 50vh;
   grid-template-columns: [main-start sidebar-start] minmax(min-content, 1vw) [sidebar-end header-start] 1fr [section-start] repeat(4, 1fr) [section-end] 1fr [header-end]; }
 
 .sidebar {
@@ -49,8 +80,9 @@ body {
 
 .header {
   grid-column: header-start / header-end;
-  background-color: #31608f;
-  text-align: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.603)), url(../img/camera_2.jpg);
+  background-size: cover;
+  background-position: center;
   color: white; }
 
 .main {

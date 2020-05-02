@@ -2,7 +2,7 @@ $color-primary-light: #19B5FE;
 $color-primary-dark:  rgb(21, 134, 187);
 $color-silver: rgb(182, 182, 182);
 
-$font-primary: 'Josefin Sans', sans-serif;
+$font-primary: 'Jost', sans-serif;
 
 
 *,
@@ -16,6 +16,7 @@ $font-primary: 'Josefin Sans', sans-serif;
 html {
    font-size: 62.5%;
    box-sizing: border-box;
+   line-height: 1.6;
 }
 
 body {

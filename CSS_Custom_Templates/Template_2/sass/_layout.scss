@@ -1,6 +1,6 @@
 .container {
    display: grid;
-   grid-template-rows: 60vh 100vh 50vh;
+   grid-template-rows: 75vh 100vh 50vh;
    grid-template-columns: [main-start sidebar-start] minmax(min-content, 1vw) [sidebar-end header-start] 1fr [section-start]repeat(4, 1fr) [section-end]1fr [header-end];
 
 }
@@ -13,9 +13,11 @@
 
 .header {
    grid-column: header-start / header-end;
-   background-color: #31608f;
-   text-align: center;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.603)),url(../img/camera_2.jpg);
+   background-size: cover;
+   background-position: center;
    color: white;
+   
 }
 
 .main {
