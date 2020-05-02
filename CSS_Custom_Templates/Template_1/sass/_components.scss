@@ -1,7 +1,7 @@
 .header {
    grid-column: 1 / -1;
    grid-row: 1 / span 2;
-   background-image: url("../images/header.jpg");
+   background-image: url(../images/header.jpg);
    background-size: cover;
 
    &_profile {
@@ -23,7 +23,7 @@
    opacity: 0.8;
    color: rgb(0, 0, 0);
    background-color: rgb(255, 255, 255);
-
+   color: rgb(80, 80, 80);
    display: grid;
    grid-template-columns: 1fr repeat(3,minmax(min-content, 31rem)) 1fr;
 
@@ -46,7 +46,25 @@
 
    &_info {
       grid-column: 4 / 5;
-      background-color: rgba(88, 32, 32, .5);
+      background-image: linear-gradient(rgb(206, 198, 198), rgb(127, 128, 143));
+      position: relative;
+
+
+      &_image_div {
+         margin: 0;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         -ms-transform: translate(-50%, -50%);
+         transform: translate(-50%, -50%);
+         text-align: center;
+      }
+
+      &_image {
+         height: 20rem;
+         width: 18rem;
+         fill: rgba(255, 255, 255, .7);
+      }
    }
 }
 
@@ -175,35 +193,38 @@
    align-items:center;
    justify-content: center;
 
+
    %item-styling {
-      background-color: #ffffff;
+      background-image: linear-gradient(rgb(206, 198, 198), rgb(127, 128, 143));
       align-self: stretch;
       margin-top: 6rem;
+      font-size: 1.75rem;
+      font-family: $font-display;
+      font-weight: 300;
+      padding: 4rem 3rem;
+      opacity: 0.9;
+      color: black;
+      text-align: center;
 
    }
    &_item_5 {
       @extend %item-styling;
       grid-column: 2 / 3;
-      z-index: 1;
    }
 
    &_item_6 {
       @extend %item-styling;
       grid-column: 3 / 4;
-      z-index: 1;
    }
 
    &_item_7 {
       @extend %item-styling;
       grid-column: 4 / 5;
-      z-index: 1;
    }
 
    &_sign_in {
       @extend %item-styling;
       grid-column: 2 / span 3;
-      background-color: white;
-      opacity: 0.5;
    }
 }
 
