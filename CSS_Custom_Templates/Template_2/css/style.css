@@ -1,0 +1,62 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  background-color: #f2f2f2;
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300; }
+
+.sidebar-image {
+  list-style: none;
+  margin: 2.25rem 1rem; }
+
+.image {
+  fill: #b6b6b6;
+  height: 2.25rem;
+  width: 2.5rem; }
+  .image:hover {
+    cursor: pointer; }
+
+.heading-1 {
+  font-size: 7rem;
+  font-family: "Josefin Sans", sans-serif; }
+
+.heading-2 {
+  font-size: 3rem;
+  font-family: "Josefin Sans", sans-serif; }
+
+.span-top {
+  margin: 3.5rem; }
+
+.container {
+  display: grid;
+  grid-template-rows: 60vh 100vh 50vh;
+  grid-template-columns: [main-start sidebar-start] minmax(min-content, 1vw) [sidebar-end header-start] 1fr [section-start] repeat(4, 1fr) [section-end] 1fr [header-end]; }
+
+.sidebar {
+  grid-row: 1 / -1;
+  background-color: #0d1217;
+  color: white; }
+
+.header {
+  grid-column: header-start / header-end;
+  background-color: #31608f;
+  text-align: center;
+  color: white; }
+
+.main {
+  grid-column: section-start / section-end;
+  background-color: #fff; }
+
+.footer {
+  grid-column: header-start / header-end;
+  background-color: #b6b6b6; }

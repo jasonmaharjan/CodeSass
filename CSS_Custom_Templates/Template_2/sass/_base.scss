@@ -1,0 +1,26 @@
+$color-primary-light: #19B5FE;
+$color-primary-dark:  rgb(21, 134, 187);
+$color-silver: rgb(182, 182, 182);
+
+$font-primary: 'Josefin Sans', sans-serif;
+
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   font-size: 62.5%;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: #f2f2f2;
+   font-size: 2rem;
+   font-family: $font-primary;
+   font-weight: 300;
+}
