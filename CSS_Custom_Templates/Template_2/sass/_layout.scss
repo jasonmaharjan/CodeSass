@@ -1,14 +1,16 @@
 .container {
    display: grid;
    grid-template-rows: 75vh 100vh 50vh;
-   grid-template-columns: [main-start sidebar-start] minmax(min-content, 1vw) [sidebar-end header-start] 1fr [section-start]repeat(4, 1fr) [section-end]1fr [header-end];
+   grid-template-columns: [main-start sidebar-start] 5.75rem [sidebar-end header-start] 5.25rem [section-start]repeat(4, 1fr) [section-end] 5.25rem [header-end];
 
 }
 
 .sidebar {
+   grid-column: 1 / 2;
    grid-row: 1 / -1;
+   height: 100%;
    background-color: #0d1217;
-   color: white;
+   position: relative;
 }
 
 .header {
@@ -16,13 +18,17 @@
    background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.603)),url(../img/camera_2.jpg);
    background-size: cover;
    background-position: center;
+   background-attachment: fixed;
    color: white;
-   
 }
 
 .main {
    grid-column: section-start / section-end;
-   background-color: #fff;
+   background-color: #f2f2f2;
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: 10rem repeat(2, 18vw) 15rem;
+
 }
 
 .footer {

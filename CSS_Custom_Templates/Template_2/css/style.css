@@ -18,18 +18,24 @@ body {
 
 .sidebar-image {
   list-style: none;
-  margin: 2.25rem 1rem; }
+  text-align: center;
+  position: fixed;
+  width: 5.75rem; }
+  .sidebar-image-item {
+    margin-top: 1.75rem; }
 
 .image {
   fill: #b6b6b6;
-  height: 2.25rem;
-  width: 2.75rem; }
+  height: 2.05rem;
+  width: 2.5rem; }
   .image:hover {
     cursor: pointer;
     fill: white; }
 
 .active {
   fill: #19B5FE; }
+  .active:hover {
+    fill: #19B5FE; }
 
 .header-content {
   margin: 20rem;
@@ -57,6 +63,46 @@ body {
   .btn:focus {
     outline-style: none; }
 
+.title {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 4rem; }
+
+.gallery-content {
+  grid-column: 1 / -1;
+  grid-row: 2 / 4;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 18vw); }
+
+.gallery-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; }
+
+.gallery-button {
+  grid-column: 1 / -1;
+  grid-row: 4 / 5;
+  text-align: center;
+  padding: 5rem 0; }
+  .gallery-button_btn {
+    color: white;
+    font-weight: 400;
+    font-family: inherit;
+    font-size: 2rem;
+    padding: 1.5rem 4rem;
+    background-color: #19B5FE;
+    border: none;
+    border-radius: .5rem;
+    transition: all .2s; }
+    .gallery-button_btn:hover {
+      cursor: pointer;
+      background-color: #1586bb; }
+    .gallery-button_btn:focus {
+      outline-style: none; }
+
 .heading-1 {
   font-size: 6rem;
   font-weight: 400;
@@ -65,29 +111,40 @@ body {
 .heading-2 {
   font-size: 2.25rem; }
 
+.heading-3 {
+  font-size: 3rem;
+  font-weight: 400;
+  color: #0d141be7; }
+
 .span-top {
   margin-top: .25rem; }
 
 .container {
   display: grid;
   grid-template-rows: 75vh 100vh 50vh;
-  grid-template-columns: [main-start sidebar-start] minmax(min-content, 1vw) [sidebar-end header-start] 1fr [section-start] repeat(4, 1fr) [section-end] 1fr [header-end]; }
+  grid-template-columns: [main-start sidebar-start] 5.75rem [sidebar-end header-start] 5.25rem [section-start] repeat(4, 1fr) [section-end] 5.25rem [header-end]; }
 
 .sidebar {
+  grid-column: 1 / 2;
   grid-row: 1 / -1;
+  height: 100%;
   background-color: #0d1217;
-  color: white; }
+  position: relative; }
 
 .header {
   grid-column: header-start / header-end;
   background-image: linear-gradient(rgba(0, 0, 0, 0.658), rgba(0, 0, 0, 0.603)), url(../img/camera_2.jpg);
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   color: white; }
 
 .main {
   grid-column: section-start / section-end;
-  background-color: #fff; }
+  background-color: #f2f2f2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 10rem repeat(2, 18vw) 15rem; }
 
 .footer {
   grid-column: header-start / header-end;
