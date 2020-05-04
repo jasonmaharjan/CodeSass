@@ -66,21 +66,25 @@ body {
 .title {
   grid-column: 1 / -1;
   text-align: center;
-  padding: 4rem; }
+  padding: 3rem; }
 
 .gallery-content {
   grid-column: 1 / -1;
   grid-row: 2 / 4;
-  background-color: white;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 18vw); }
+  grid-template-rows: repeat(2, 22vw); }
 
-.gallery-item-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block; }
+.gallery-item {
+  overflow: hidden; }
+  .gallery-item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all .2s ease-in; }
+    .gallery-item-image:hover {
+      transform: scale(1.05); }
 
 .gallery-button {
   grid-column: 1 / -1;
@@ -103,6 +107,27 @@ body {
     .gallery-button_btn:focus {
       outline-style: none; }
 
+.footer_content_1_text-1, .footer_content_1_text-2 {
+  font-size: 1.65rem;
+  color: rgba(0, 0, 0, 0.603); }
+
+.footer_content {
+  grid-column: header-start / header-end;
+  background-color: #e6e6e6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .footer_content_1 {
+    grid-column: 1 / 2;
+    padding: 5rem; }
+    .footer_content_1_text-1 {
+      margin: 2rem 0; }
+    .footer_content_1_text-2 {
+      margin: 2rem 0 4rem 0; }
+  .footer_content_2 {
+    grid-column: 2 / 3;
+    padding: 5rem;
+    background-color: #eeecec; }
+
 .heading-1 {
   font-size: 6rem;
   font-weight: 400;
@@ -112,7 +137,7 @@ body {
   font-size: 2.25rem; }
 
 .heading-3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   color: #0d141be7; }
 
@@ -121,8 +146,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-rows: 75vh 100vh 50vh;
-  grid-template-columns: [main-start sidebar-start] 5.75rem [sidebar-end header-start] 5.25rem [section-start] repeat(4, 1fr) [section-end] 5.25rem [header-end]; }
+  grid-template-rows: 90vh min-content minmax(37vw, max-content) 12.5rem;
+  grid-template-columns: [main-start sidebar-start] 5.75rem [sidebar-end header-start] 5.25rem [section-start] repeat(4, minmax(20vw, 1fr)) [section-end] 5.25rem [header-end]; }
 
 .sidebar {
   grid-column: 1 / 2;
@@ -143,9 +168,20 @@ body {
   grid-column: section-start / section-end;
   background-color: #f2f2f2;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 10rem repeat(2, 18vw) 15rem; }
+  grid-template-rows: 10rem repeat(2, minmax(min-content, max-content)) 15rem;
+  grid-template-columns: repeat(4, 1fr); }
 
 .footer {
   grid-column: header-start / header-end;
-  background-color: #b6b6b6; }
+  background-color: #e6e6e6;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+
+.copyright {
+  grid-column: header-start / header-end;
+  grid-row: 4 / -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #bfbfbf; }

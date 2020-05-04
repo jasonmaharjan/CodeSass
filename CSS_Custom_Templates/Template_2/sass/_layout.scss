@@ -1,8 +1,7 @@
 .container {
    display: grid;
-   grid-template-rows: 75vh 100vh 50vh;
-   grid-template-columns: [main-start sidebar-start] 5.75rem [sidebar-end header-start] 5.25rem [section-start]repeat(4, 1fr) [section-end] 5.25rem [header-end];
-
+   grid-template-rows: 90vh min-content minmax(37vw, max-content) 12.5rem;
+   grid-template-columns: [main-start sidebar-start] 5.75rem [sidebar-end header-start] 5.25rem [section-start]repeat(4, minmax(20vw, 1fr)) [section-end] 5.25rem [header-end];
 }
 
 .sidebar {
@@ -26,12 +25,25 @@
    grid-column: section-start / section-end;
    background-color: #f2f2f2;
    display: grid;
+   grid-template-rows: 10rem repeat(2, minmax(min-content,max-content)) 15rem;
    grid-template-columns: repeat(4, 1fr);
-   grid-template-rows: 10rem repeat(2, 18vw) 15rem;
-
 }
 
 .footer {
    grid-column: header-start / header-end;
-   background-color: $color-silver;
+   background-color: #e6e6e6;
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+}
+
+.copyright {
+   grid-column: header-start / header-end;
+   grid-row: 4 / -1;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1.5rem;
+   color: #bfbfbf;
+   
 }
