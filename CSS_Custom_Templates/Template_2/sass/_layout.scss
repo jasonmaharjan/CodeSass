@@ -1,7 +1,14 @@
 .container {
    display: grid;
-   grid-template-rows: 90vh min-content minmax(37vw, max-content) 12.5rem;
+   grid-template-rows: 80vh min-content minmax(37vw, max-content) 10rem;
    grid-template-columns: [main-start sidebar-start] 5.75rem [sidebar-end header-start] 5.25rem [section-start]repeat(4, minmax(20vw, 1fr)) [section-end] 5.25rem [header-end];
+
+   @media only screen and (max-width: $bp-large) {
+      grid-template-columns: [main-start sidebar-start] 5.75rem [sidebar-end header-start] 4rem [section-start]repeat(4, minmax(20vw, 1fr)) [section-end] 4rem [header-end];
+   }
+   @media only screen and (max-width: $bp-font) {
+      grid-template-rows: 60vh min-content minmax(37vw, max-content) 10rem;
+   }
 }
 
 .sidebar {
@@ -40,10 +47,10 @@
    grid-column: header-start / header-end;
    grid-row: 4 / -1;
 
+   margin: 2rem;
    display: flex;
    justify-content: center;
    align-items: center;
    font-size: 1.5rem;
-   color: #bfbfbf;
-   
+   color: #bfbfbf;   
 }

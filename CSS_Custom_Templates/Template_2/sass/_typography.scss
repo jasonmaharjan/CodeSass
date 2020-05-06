@@ -1,11 +1,19 @@
 .heading-1 {
-   font-size: 6rem;
+   font-size: 7rem;
    font-weight: 400;
    letter-spacing: .1rem;
+
+   @media only screen and (max-width: $bp-font) {
+      font-size: 4rem;
+   }
 }
 
 .heading-2 {
-   font-size: 2.25rem;
+   font-size: 2.5rem;
+
+   @media only screen and (max-width: $bp-font) {
+      font-size: 1.75rem;
+   }
 }
 
 .heading-3 {

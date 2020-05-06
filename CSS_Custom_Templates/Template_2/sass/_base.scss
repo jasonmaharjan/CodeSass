@@ -6,6 +6,7 @@ $color-heading-3: #0d141be7;
 $font-primary: 'Jost', sans-serif;
 
 
+
 *,
 *::before,
 *::after {
@@ -26,3 +27,12 @@ body {
    font-family: $font-primary;
    font-weight: 300;
 }
+
+
+// Media queries
+
+$bp-largest: 68.75em; // 1100px
+$bp-large: 62.5em; // 900px
+$bp-small: 43.75em; // 700px
+$bp-font: 50em; // 800px
+$bp-smallest: 25em; // 480px
