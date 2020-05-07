@@ -1,0 +1,29 @@
+$color-white: white;
+$color-white-faded: rgba(255, 255, 255, .8);
+
+$color-primary: #F64747;
+$color-secondary: #fdd1d1;
+
+$font-header: "Lobster", cursive;
+$font-main: "Open Sans", Arial, Helvetica, sans-serif;
+
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+html {
+   font-size: 62.5%;
+   box-sizing: border-box;
+   line-height: 1.6;
+}
+
+body {
+   font-size: 2rem;
+   font-family: $font-header;
+   color: white;
+   background-color: $color-primary;
+}

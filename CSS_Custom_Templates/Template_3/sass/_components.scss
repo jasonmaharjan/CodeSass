@@ -1,0 +1,35 @@
+// HEADER
+.header{
+
+   &_nav {
+      border-radius: 100%;
+      background-color: rgba(184, 182, 182, 0.603);
+      text-decoration: none;
+      color: white;
+      opacity: .86;
+      position: fixed;
+      top: 2rem;
+      right: 2rem;
+      height: 4rem;
+      width: 4rem;
+      text-align: center;
+
+      &:hover {
+         background-color: rgba(0,0,0,.15);
+         cursor: pointer;
+      }
+   }
+
+   /*
+   #span {
+      display: none
+   }*/
+
+   &_text {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   }   
+}
+
