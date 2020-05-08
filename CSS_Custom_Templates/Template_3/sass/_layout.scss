@@ -12,7 +12,11 @@
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
+
+   -webkit-animation: fadein 4s;
 }
+
+
 
 .section_1 {
    grid-row: 2 / 3;
