@@ -4,7 +4,7 @@
    
    &_button {
       border-radius: 100%;
-      background-color: rgba(184, 182, 182, 0.603);
+      background-color: rgba(184, 182, 182, 0.521);
       position: fixed;
       z-index: 1;
       top: 2rem;
@@ -46,7 +46,7 @@
       background-color: transparent;
 
       .header_icon,.header_icon::before,.header_icon::after {
-         background-color: rgba(184, 182, 182, 0.603);
+         background-color: rgba(184, 182, 182, 0.863);
       }
    }
 
@@ -59,3 +59,102 @@
    }   
 }
 
+.section_content {
+   
+   margin: 20.65rem 30rem;
+   background-color: rgba(0, 0, 0, 0.5);
+   font-family: "Open Sans", Arial, Helvetica, sans-serif;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center; 
+   
+   &_main {
+      padding: 0 6rem;
+      margin-bottom: 2.5rem;
+   }
+}
+
+
+// FOOTER
+
+.footer {
+
+   &_contact {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 2rem 0 5rem 0;
+   }
+
+   &_form {
+      grid-column: 2 / -2;
+
+      display: grid;
+      grid-template-rows: repeat(3, min-content);
+      grid-template-columns: repeat(2, minmax(min-content, 1fr));
+
+      grid-row-gap: 2rem;
+      grid-column-gap: 3rem;
+      align-items: center;
+
+      %form-style {
+         margin-top: 1.25rem;
+         width: 100%;
+
+         background-color: rgba(255, 255, 255, 0.075);
+         border: none;
+         border: 1px solid;
+         border-radius: 4px;
+         border-color: rgba(255, 255, 255, 0.25);
+         outline-style: none;
+         padding: 0 1rem;
+         color: white;
+
+         &::-webkit-input-placeholder{
+            color: rgba(255, 255, 255, 0.397);
+            font-family: "Open Sans", Arial, Helvetica, sans-serif;
+         }
+
+         &:focus {
+            outline-style: none;
+            border: 1.75px solid white;
+         }
+      }
+
+      &_name {
+         grid-column: 1 / 2;
+         grid-row: 1 / 2;
+
+         #name {
+            @extend %form-style;    
+            height: 4rem;  
+         }
+      }
+
+      &_email {
+         grid-column: 2 / 3;
+         grid-row: 1 / 2;
+
+         #email{
+            @extend %form-style;   
+            height: 4rem;
+         }
+      }
+
+      &_message {
+         grid-column: 1 / -1;
+         grid-row: 2 / 3;
+
+         #message {
+            @extend %form-style;  
+            height: 20rem; 
+         }
+      }
+
+      &_button {
+         grid-column: 1 / 2;
+         grid-row: 3 / -1;
+      }
+   }
+}
